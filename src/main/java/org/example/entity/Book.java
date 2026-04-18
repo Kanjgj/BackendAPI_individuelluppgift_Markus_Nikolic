@@ -10,7 +10,7 @@ public class Book {
     private Long id;
 
     private String title;
-    private String author; // behåll
+    private String author;
     private String isbn;
     private int publishedYear;
 

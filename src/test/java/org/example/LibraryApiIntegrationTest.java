@@ -29,7 +29,6 @@ public class LibraryApiIntegrationTest {
     @Test
     void createAuthorBookAndLoan() {
 
-        // CREATE AUTHOR
         AuthorDTO author = new AuthorDTO();
         author.setName("Markus");
 
@@ -38,7 +37,6 @@ public class LibraryApiIntegrationTest {
 
         assertThat(authorResponse.getStatusCode()).isEqualTo(HttpStatus.CREATED);
 
-        // CREATE BOOK
         BookDTO book = new BookDTO();
         book.setTitle("Test Book");
         book.setAuthor("Markus");
@@ -94,7 +92,6 @@ public class LibraryApiIntegrationTest {
     @Test
     void shouldOnlyCreateOneLoanUnderConcurrency() throws InterruptedException {
 
-        // skapa book
         BookDTO book = new BookDTO();
         book.setTitle("Concurrent Book");
         book.setAuthor("Markus");
